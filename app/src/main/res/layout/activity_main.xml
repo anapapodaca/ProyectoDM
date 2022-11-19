@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/Titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="80dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="KP Save"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="50dp"
+
+        android:textStyle="italic"
+
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtAutenticacion"
+        android:layout_width="333dp"
+        android:layout_height="98dp"
+
+        android:fontFamily="sans-serif-condensed"
+        android:text="Ingresa el ID del brazalete o autenticate con google."
+        android:textAlignment="center"
+        android:textSize="25dp"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Titulo" />
+
+    <ImageView
+        android:id="@+id/google"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAutenticacion"
+        app:layout_constraintVertical_bias="0.667"
+        app:srcCompat="@drawable/google" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/txtId"
+        android:layout_width="329dp"
+        android:layout_height="56dp"
+        android:hint="ID"
+        app:layout_constraintBottom_toTopOf="@+id/google"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAutenticacion"
+        app:layout_constraintVertical_bias="0.311" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Ingresar"
+        android:backgroundTint="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/txtId"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:onClick="Ingresar"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
